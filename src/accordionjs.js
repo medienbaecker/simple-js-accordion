@@ -75,9 +75,13 @@
 
         currentPanel = _checkForActivePanelOnLoad();
 
-        accordionPanels.forEach(function(panel){
-            panel.querySelector('a').addEventListener('click', _activateSelectedPanel);
-        });
+        // accordionPanels.forEach(function(panel){
+        //     panel.querySelector('a').addEventListener('click', _activateSelectedPanel);
+        // });
+
+        for (var i = 0, len = accordionPanels.length; i < len; i++) {
+            accordionPanels[i].querySelector('a').addEventListener('click', _activateSelectedPanel);
+        }
 
     }
 
